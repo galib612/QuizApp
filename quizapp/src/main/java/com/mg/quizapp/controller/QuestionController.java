@@ -38,7 +38,7 @@ public class QuestionController {
     }
 
     @PutMapping("update/{id}")
-    public String updateQuestionById(@RequestBody Question question, @PathVariable Integer id){
+    public ResponseEntity<String> updateQuestionById(@RequestBody Question question, @PathVariable Integer id){
         return questionService.updateQuestionById(id, question);
     }
 
